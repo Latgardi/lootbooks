@@ -181,11 +181,41 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    document.querySelector("#input-url").addEventListener("open", function (event) {
-        const result = $('.autoComplete_result')
-        result.on('click', function () {
-            $('#input-url').val($(this).text())
-        })
+    const autoCompleteJS = new autoComplete({
+        selector: '#input-url',
+        data: {
+            src: async (query) => {
+                try {
+                    // Fetch Data from external Source
+                    const source = await $.ajax({
+                        url: "/api/suggestions",
+                        type: "GET",
+                        data: {
+                            query: $('#input-url').val()
+                        }
+                    });
+                    return source
+                } catch (error) {
+                    return error;
+                }
+            }
+        },
+        resultItem: {
+            tag: "li",
+            class: "autoComplete_result",
+            element: (item, data) => {
+                item.setAttribute("data-parent", "food-item");
+            },
+            highlight: "autoComplete_highlight",
+            selected: "autoComplete_selected"
+        },
+        events: {
+            input: {
+                selection: (event) => {
+                    autoCompleteJS.input.value = event.detail.selection.value;
+                }
+            }
+        }
     });
 });
 
