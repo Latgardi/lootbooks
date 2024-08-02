@@ -1,6 +1,3 @@
-@php
-header('Access-Control-Allow-Origin'. true);
-@endphp
 <!DOCTYPE html>
 <html lang="en">
 

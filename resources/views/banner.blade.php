@@ -10,10 +10,10 @@
                         Как это работает? ➡️
                     </div>
                 </li>
-                <li class="splide__slide"><img src="{{ asset('assets/images/literature_1.png') }}"></li>
-                <li class="splide__slide"><img src="{{ asset('assets/images/literature_2.png') }}"></li>
-                <li class="splide__slide"><img src="{{ asset('assets/images/literature_3.png') }}"></li>
-                <li class="splide__slide"><img src="{{ asset('assets/images/literature_4.png') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('assets/images/literature_1.svg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('assets/images/literature_2.svg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('assets/images/literature_3.svg') }}"></li>
+                <li class="splide__slide"><img src="{{ asset('assets/images/literature_4.svg') }}"></li>
             </ul>
         </div>
     </section>
