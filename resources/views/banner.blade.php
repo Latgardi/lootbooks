@@ -5,7 +5,7 @@
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
-                    <img src="{{ asset('assets/images/mobile_banner.svg') }}">
+                    <img src="{{ asset('assets/images/mobile_banner.png') }}">
                     <div>
                         Как это работает? ➡️
                     </div>
