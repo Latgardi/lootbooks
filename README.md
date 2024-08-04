@@ -1,5 +1,5 @@
 ### LOOTBOOKS 
 
-# <a href="https://lootbooks.ru" target="_blank">lootbooks.ru</a>
+# <a target="_blank" href="https://lootbooks.ru">lootbooks.ru</a>
 
 
