@@ -1,10 +1,9 @@
-var litresWidget = {
+const litresWidget = {
     init: function () {
-        var dataWidgetLitresAuthorSelector = document.querySelectorAll('[data-widget-litres-author]');
-        var dataWidgetLitresBookSelector = document.querySelectorAll('[data-widget-litres-book]');
-        var dataWidgetLitresAuthor = (dataWidgetLitresAuthorSelector.length > 0) ? dataWidgetLitresAuthorSelector[0].innerHTML : undefined;
-        var dataWidgetLitresBook = (dataWidgetLitresBookSelector.length > 0) ? dataWidgetLitresBookSelector[0].innerHTML : undefined;
-        if (dataWidgetLitresBook) {
+        //var dataWidgetLitresAuthorSelector = document.querySelectorAll('[data-widget-litres-author]');
+        //var dataWidgetLitresBookSelector = document.querySelectorAll('[data-widget-litres-book]');
+        //var dataWidgetLitresAuthor = (dataWidgetLitresAuthorSelector.length > 0) ? dataWidgetLitresAuthorSelector[0].innerHTML : undefined;
+        if (true) {
             function convertGetParams(obj) {
                 var params = [];
                 for (var key in obj) {
@@ -29,6 +28,8 @@ var litresWidget = {
                     }
                 } catch (e) {
                 }
+                const dataWidgetLitresBook = $(litresScriptElem).siblings('[data-widget-litres-book]').text()
+                const dataWidgetLitresAuthor = $(litresScriptElem).siblings('[data-widget-litres-author]').text()
                 var url = 'https://www.litres.ru/ref_widget_art_alltypes/?q=' + encodeURIComponent(dataWidgetLitresBook) + '&q_author=' + encodeURIComponent(dataWidgetLitresAuthor ? dataWidgetLitresAuthor : '') + litresLfrom + litresUtmParam;
                 if (litresCountry) {
                     url += '&country=' + litresCountry;
