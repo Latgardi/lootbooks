@@ -8,7 +8,7 @@
             </div>
             @include('ajax/books-load')
         </div>
-        <div class="container text-center">
+        <div class="container text-center pb-5">
             <a class="load-more filled-button" href="{{ Request::fullUrl() }}">
                 @lang('main.load-more')
             </a>

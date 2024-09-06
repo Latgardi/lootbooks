@@ -9,7 +9,7 @@
             </div>
             @include('ajax/books-search-load')
         </div>
-            <div class="container text-center">
+            <div class="container text-center pb-5">
                 <a class="load-more-search filled-button" data-offset="{{ $counter->nextOffset }}">
                     @lang('main.load-more')
                 </a>
