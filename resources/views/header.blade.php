@@ -15,4 +15,5 @@
         </div>
     </nav>
 </header>
+@include('menu')
 

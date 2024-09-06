@@ -19,9 +19,7 @@ p {
 	color: #4a4a4a;
 	line-height: 24px;
 }
-a {
-	text-decoration: none!important;
-}
+
 ul {
 	padding: 0;
 	margin: 0;
@@ -101,7 +99,7 @@ a.filled-button:hover {
 }
 
 .page-heading {
-	padding: 210px 0px 130px 0px;
+	padding: 100px 0px 130px 0px;
 	text-align: center;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -109,7 +107,6 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h4 {
-	color: #f33f3f;
 	font-size: 22px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -117,7 +114,7 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h2 {
-	color: #fff;
+	color: #f33f3f;
 	font-size: 62px;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -215,6 +212,25 @@ header {
     -o-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
 }
+.nav-list {
+    padding-top: 100px;
+    background-color: #232323;
+    color: azure;
+}
+.nav-list span {
+    color: azure;
+}
+header .text-muted {
+    color: #9cbfda !important;
+}
+footer .nav-list {r: bl
+    padding-top: 0px;
+    background-color: unset;
+    color: black;
+}
+footer .nav-list span {
+    color: black;
+}
 header .navbar {
 	padding: 17px 0px;
 }
@@ -245,7 +261,6 @@ header .navbar {
 .banner {
 	position: relative;
 	text-align: center;
-	padding-top: 80px;
 }
 
 
@@ -330,7 +345,7 @@ header .navbar {
 /* Latest Produtcs */
 
 .latest-products {
-	margin-top: 100px;
+	margin-top: 0px;
 }
 
 .latest-products .section-heading a {
@@ -858,6 +873,9 @@ footer .inner-content p a {
     header {
         height: 120px;
     }
+    .nav-list {
+        padding-top: 130px;
+    }
     .search-container {
         display: block;
         padding-top: 50px;
@@ -940,6 +958,9 @@ footer .inner-content p a {
     }
 }
 @media (max-width: 992px) {
+    .latest-products {
+        margin-top: 50px;
+    }
     .desktop-banner {
         display: none;
     }
@@ -1097,8 +1118,68 @@ a.filled-button {
         margin-left: 10px;
         width: 16rem;
     }
+    .page-heading {
+        padding: 150px 0px 130px 0px;
+    }
 }
 
 .navbar .navbar-brand h2 {
     color: azure;
+}
+
+.call-to-action .inner-content {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.contacts {
+    font-size: 18px;
+}
+
+.ordered-list li {
+    margin-bottom: 10px;
+}
+
+.text-page {
+    padding: 20px 0px 0px 0px;
+}
+.bullet-list {
+    padding-left: 20px;
+}
+.bullet-list li::before {
+        content: "•";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 15px;
+}
+
+.faq-list li, .accordion li a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 24px;
+}
+
+.ordered-list li {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+a.nav-link:hover {
+    color: #f33f3f;
+}
+.nav-link {
+    color: #6c757d;
+}
+
+.about-list {
+    font-size: 16px;
+    font-weight: 300;
+    color: #4a4a4a;
+    line-height: 30px;
+}
+
+footer .nav-list {
+    padding-top: unset;
 }

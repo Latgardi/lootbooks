@@ -19,4 +19,8 @@ Route::group(['middleware' => \App\Http\Middleware\CorsMiddleware::class], funct
     });
     Route::get('/search', [\App\Http\Controllers\SearchController::class, 'search']);
     Route::post('/search', [\App\Http\Controllers\SearchController::class, 'proceedAjaxSearchRequest']);
+    Route::get('/contacts', [\App\Http\Controllers\TextPageController::class, 'contacts'])->name('contacts');
+    Route::get('/partners', [\App\Http\Controllers\TextPageController::class, 'partners'])->name('partners');
+    Route::get('/faq', [\App\Http\Controllers\TextPageController::class, 'faq'])->name('faq');
+    Route::get('/about', [\App\Http\Controllers\TextPageController::class, 'about'])->name('about');
 });

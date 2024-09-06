@@ -105,6 +105,9 @@ jQuery(document).ready(function ($) {
     $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
 
     $('.accordion a').click(function (j) {
+        if ($(this).hasClass('inner-link')) {
+            return true;
+        }
         var dropDown = $(this).closest('li').find('.content');
 
         $(this).closest('.accordion').find('.content').not(dropDown).slideUp();

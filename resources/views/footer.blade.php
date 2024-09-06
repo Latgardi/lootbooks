@@ -1,11 +1,8 @@
 <footer>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="inner-content">
-                    <p>Copyright &copy; 2024 Lootbooks</p>
-                </div>
-            </div>
-        </div>
+        <footer>
+            @include('menu')
+            <p class="text-center text-muted">&copy; 2024 Lootbooks</p>
+        </footer>
     </div>
 </footer>

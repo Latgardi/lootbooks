@@ -17,8 +17,11 @@
     <link rel="stylesheet" href="{{ asset('vendor/autocomplete/autoComplete.02.css') }}">
     <script src="{{ asset('vendor/splide/splide.min.js') }}"></script>
     <link href="{{ asset('vendor/splide/splide.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/splide/splide-sea-green.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-sixteen.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/fa/all.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
