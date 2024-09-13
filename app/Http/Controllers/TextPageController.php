@@ -30,4 +30,8 @@ class TextPageController extends Controller
     {
         return view('about');
     }
+    public function userAgreement(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
+    {
+        return view('user-agreement');
+    }
 }

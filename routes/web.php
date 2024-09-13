@@ -23,4 +23,5 @@ Route::group(['middleware' => \App\Http\Middleware\CorsMiddleware::class], funct
     Route::get('/partners', [\App\Http\Controllers\TextPageController::class, 'partners'])->name('partners');
     Route::get('/faq', [\App\Http\Controllers\TextPageController::class, 'faq'])->name('faq');
     Route::get('/about', [\App\Http\Controllers\TextPageController::class, 'about'])->name('about');
+    Route::get('/user-agreement', [\App\Http\Controllers\TextPageController::class, 'userAgreement'])->name('user-agreement');
 });

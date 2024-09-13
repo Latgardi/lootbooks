@@ -7,7 +7,7 @@
                         <h4><em>Вы владелец книжного магазина?</em></h4>
                     </div>
                     <div class="row justify-content-center">
-                        <a href="/partners" class="filled-button">Узнайте как стать нашим партнером!</a>
+                        <a href="{{ url('/partners') }}" class="filled-button">Узнайте как стать нашим партнером!</a>
                     </div>
                 </div>
             </div>
