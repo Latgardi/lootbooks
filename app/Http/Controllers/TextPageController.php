@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Str;
 use Litres\Parser\LitresParser;
 use Litres\Quote\DayQuote;
 
@@ -24,7 +26,15 @@ class TextPageController extends Controller
 
     public function faq(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('faq');
+        $faqs = Faq::all();
+        $faqs->each(function (Faq $faq) {
+            $faq->answer = str_replace(
+                search: '<ul>',
+                replace: '<ul class="bullet-list faq-list">',
+                subject: Str::markdown($faq->answer)
+            );
+        });
+        return view('faq')->with('faqs', $faqs);
     }
     public function about(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
     {

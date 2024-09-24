@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <footer class="pb-4">
-            @include('menu')
+            @include('footer-menu')
             <div class="row">
                 <span class="col-md-4"></span>
             <p class="col-md-4 text-center text-muted">&copy; 2024 Lootbooks</p>

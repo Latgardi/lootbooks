@@ -961,6 +961,9 @@ footer .inner-content p a {
     header {
         position: unset;
     }
+    .latest-products {
+        margin-top: 30px;
+    }
 }
 @media (max-width: 992px) {
     .nav.mobile-menu {
@@ -1220,4 +1223,17 @@ footer .nav-list {
 
 .mobile-menu {
     display: none;
+}
+
+.btn-outline-danger.search-button {
+    margin-left: 10px
+}
+@media only screen and (max-width: 600px) {
+    .autoComplete_wrapper > input.form-control {
+        width: 14rem;
+    }
+}
+
+a.load-more-search:not([href]):not([tabindex]) {
+    color: azure
 }

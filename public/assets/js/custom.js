@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 
     $(window).scroll(function () {
         const scroll = $(window).scrollTop();
-        const header = $('header').height();
+        const header = Number($('header').height()) / 2;
 
         if (scroll >= header) {
             $(".navbar.fixed-top").addClass("background-header");
