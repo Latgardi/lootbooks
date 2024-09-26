@@ -5,7 +5,7 @@
             <div class="row">
                 <span class="col-md-4"></span>
             <p class="col-md-4 text-center text-muted">&copy; 2024 Lootbooks</p>
-            <a href="{{ url('/public-offer') }}" class="col-md-4 text-center footer-link">Пользовательское соглашение</a>
+            <a href="{{ url('/offer') }}" class="col-md-4 text-center footer-link">Пользовательское соглашение</a>
             </div>
         </footer>
     </div>

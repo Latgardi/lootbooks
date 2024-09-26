@@ -9,7 +9,7 @@
             @include('ajax/books-load')
         </div>
         <div class="container text-center pb-5">
-            <a class="load-more filled-button" href="{{ Request::fullUrl() }}">
+            <a class="load-more filled-button" href="{{ Request::fullUrl() . '/page=2' }}">
                 @lang('main.load-more')
             </a>
         </div>
