@@ -13,8 +13,9 @@ use Ramsey\Uuid\Uuid;
 
 class SearchParser
 {
+    public const int DEFAULT_LIMIT = 24;
     private const string SUGGESTION_URL = 'https://api.litres.ru/foundation/api/search/suggestions';
-    public const string SEARCH_URL = 'https://api.litres.ru/foundation/api/search?is_for_pda=false&limit=24&o=popular&types=text_book&show_unavailable=false';
+    public const string SEARCH_URL = 'https://api.litres.ru/foundation/api/search?is_for_pda=false&o=popular&types=text_book&show_unavailable=false';
 
     public function __construct(
         public readonly LitresParser $litresParser,
@@ -24,6 +25,7 @@ class SearchParser
     {
         $url = \Spatie\Url\Url::fromString(self::SEARCH_URL);
         $url = $url->withQueryParameter('q', $query);
+        $url = $url->withQueryParameter('limit', self::DEFAULT_LIMIT);
         if ($offset > 0) {
             $url = $url->withQueryParameter('offset', $offset);
         }

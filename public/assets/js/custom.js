@@ -138,7 +138,7 @@ jQuery(document).ready(function ($) {
     $('.load-more-search').on('click', function (e) {
         e.preventDefault();
         let page = window.location.href
-        const offset = $(this).data('offset')
+        const offset = $(this).attr('data-offset')
         $.ajax(
             {
                 url: page,
@@ -152,18 +152,20 @@ jQuery(document).ready(function ($) {
         )
             .done(function (data) {
                 $(".popular-books").append($(data));
-                const offset = $(data).data('offset')
-                $(".load-more-search").attr(
-                    'data-offset',
-                    offset
-                )
-                litresWidget.init()
-                $('.offers-container').show('slow')
-                if (offset.length === 0) {
+                const offset = $(data).attr('data-offset')
+                console.log(offset)
+                if (typeof offset === 'undefined' || offset.length === 0) {
                     $('.load-more-search').fadeOut(500, function(){
                         $(this).remove()
                     });
+                } else {
+                    $(".load-more-search").attr(
+                        'data-offset',
+                        offset
+                    )
                 }
+                litresWidget.init()
+                $('.offers-container').show('slow')
                 //$('#loadingDiv').hide()
             }).fail(function (jqXHR, ajaxOptions, thrownError) {
             console.log(thrownError)

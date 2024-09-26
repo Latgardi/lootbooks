@@ -1,5 +1,5 @@
-        <div class="row">
-            <div class="col-md-12">
+<div class="best-features">
+    <div class="container">
                 <div class="section-heading text-center">
                     <h2>@lang('main.search-results-empty')</h2>
                 </div>
