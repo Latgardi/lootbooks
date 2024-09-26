@@ -21,13 +21,13 @@ class MainController extends Controller
         $books = $this->top500();
         if ($request->ajax()) {
             return view('ajax.books-load')
-                ->with(['books' => $this->top500()])
+                ->with(['books' => $books])
                 ->render();
         }
         return view('main')
             ->with(['genres' => $this->litresParser->getCategories()])
             ->with(['topBook' => $this->topBook()])
-            ->with(['books' => $this->top500()])
+            ->with(['books' => $books])
             ->with(['title' => env('APP_NAME')])
             ->with(['quote' => $this->dayQuote->getQuote()]);
     }

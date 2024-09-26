@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Faq;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -17,7 +18,10 @@ class TextPageController extends Controller
 {
     public function contacts(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('contacts');
+        $contacts = Contact::first();
+        $contacts->text = Str::markdown($contacts->text);
+        $contacts->text = str_replace('<p>', '<p class="lead p-2">', $contacts->text);
+        return view('contacts')->with('contacts', $contacts);
     }
     public function partners(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
     {
@@ -40,8 +44,8 @@ class TextPageController extends Controller
     {
         return view('about');
     }
-    public function userAgreement(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
+    public function publicOffer(Request $request): Factory|\Illuminate\Foundation\Application|View|Application
     {
-        return view('user-agreement');
+        return view('public-offer');
     }
 }

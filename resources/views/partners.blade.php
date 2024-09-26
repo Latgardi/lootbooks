@@ -21,14 +21,19 @@
                                     условия:
                                 </p>
                                 </div>
+                                <ol class="text-left ordered-list lead">
+                                    <li>Быть независимым книжным магазином в России :)</li>
+                                    <li>Принять короткую оферту-договор (подписывается через эл. почту)</li>
+                                    <li>Разместить у себя в магазине один наш плакат. Плакат за наш счет. Размер А4 или А3 на
+                                        выбор. Пример плаката ниже.
+                                    </li>
+                                </ol>
                             </div>
-                            <ol class="text-left ordered-list">
-                                <li>Быть независимым книжным магазином в России :)</li>
-                                <li>Принять короткую оферту-договор (подписывается через эл. почту)</li>
-                                <li>Разместить у себя в магазине один наш плакат. Плакат за наш счет. Размер А4 или А3 на
-                                    выбор. Пример плаката ниже.
-                                </li>
-                            </ol>
+                            <div class="col-md-6 mobile-poster">
+                                <div class="right-image">
+                                    <img src="{{asset('assets/images/poster.jpg')}}" alt="">
+                                </div>
+                            </div>
                         </div>
                         <div class="text-center">
                             <h5 class="text-content p-2">Как принять оферту</h5>
@@ -40,7 +45,7 @@
                                             href="mailto:hello@lootbooks.ru">hello@lootbooks.ru</a> или в Телеграм <a
                                             href="https://t.me/lootbooks">@lootbooks</a>. Укажите в письме свои
                                         контактные данные:</p>
-                                    <ul class="text-left bullet-list ordered-list">
+                                    <ul class="text-left bullet-list ordered-list lead">
                                         <li>Название магазина</li>
                                         <li>Адрес</li>
                                         <li>Контакты (эл. почта, телефон)</li>
@@ -60,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 desktop-poster">
                 <div class="right-image">
                     <img src="{{asset('assets/images/poster.jpg')}}" alt="">
                 </div>

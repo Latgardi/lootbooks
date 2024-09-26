@@ -1,21 +1,16 @@
 @php
     use Illuminate\Support\Facades\Request;
-    $menuItems = [
-        '/about' => 'О проекте',
-        '/faq' => 'ЧаВо',
-        '/partners' => 'Партнерам',
-        '/contacts' => 'Контакты'
-    ];
+    $menuItems = \App\Models\Menu::all();
 @endphp
 <ul class="nav justify-content-center border-bottom pb-3 mb-3 nav-list mobile-menu">
-    @foreach($menuItems as $link => $title)
-        @if (str_contains(Request::url(), $link))
+    @foreach($menuItems as $menuItem)
+        @if (str_contains(Request::url(), $menuItem->url))
             <li class="nav-item">
-                <span class="nav-link px-2d active">{{ $title }}</span>
+                <span class="nav-link px-2d active">{{ $menuItem->title }}</span>
             </li>
         @else
             <li class="nav-item">
-                <a href="{{ $link }}" class="nav-link px-2">{{ $title }}</a>
+                <a href="{{ $menuItem->url }}" class="nav-link px-2">{{ $menuItem->title }}</a>
             </li>
         @endif
     @endforeach

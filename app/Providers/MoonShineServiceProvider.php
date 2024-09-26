@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\MoonShine\Pages\Contacts;
+use App\MoonShine\Resources\ContactResource;
 use App\MoonShine\Resources\FaqResource;
+use App\MoonShine\Resources\MenuResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
@@ -51,7 +54,9 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 ),
             ]),
 
-            MenuItem::make('ЧаВо', new FaqResource())
+            MenuItem::make('ЧаВо', new FaqResource()),
+            MenuItem::make('Меню', new MenuResource()),
+            MenuItem::make('Контакты', new ContactResource()),
         ];
     }
 

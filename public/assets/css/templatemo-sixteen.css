@@ -1181,11 +1181,6 @@ a.filled-button {
     line-height: 24px;
 }
 
-.ordered-list li {
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
 a.nav-link:hover {
     color: #f33f3f;
 }
@@ -1232,8 +1227,16 @@ footer .nav-list {
     .autoComplete_wrapper > input.form-control {
         width: 14rem;
     }
+    .desktop-poster {
+        display: none;
+    }
+    div.mobile-poster {
+        display: block;
+    }
 }
-
+.mobile-poster {
+    display: none;
+}
 a.load-more-search:not([href]):not([tabindex]) {
     color: azure
 }

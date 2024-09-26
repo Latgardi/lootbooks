@@ -2,6 +2,7 @@
 
 <body>
 @include('header')
+@include('warning-alert')
 @include('banner')
 <script>
     new Splide( '.splide', {

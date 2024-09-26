@@ -6,19 +6,19 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h2>Контакты</h2>
+                    <h2>{{ $contacts->title }}</h2>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="left-content">
                     <div class="col-md-12">
-                        <p class="lead p-2">По всем вопросам можете связаться с нами по почте <a href="mailto:hello@lootbooks.ru">hello@lootbooks.ru</a><br>или в Телеграм <a href="https://t.me/lootbooks">@lootbooks</a></p>
+                        {!! $contacts->text !!}
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <a href="https://t.me/lootbooks">
-                    <img style="max-width: 50%" class="rounded float-right" src="{{asset('assets/images/telegram.jpg')}}" alt="">
+                <a href="{{ $contacts->link }}">
+                    <img style="max-width: 50%" class="rounded float-right" src="{{ asset('storage/' . $contacts->image) }}" alt="">
                 </a>
             </div>
         </div>
